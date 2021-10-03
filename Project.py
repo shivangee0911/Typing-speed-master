@@ -65,6 +65,10 @@ count = 0
 sliderwords =''
 miss = 0
 ##############################Label Methods
+fontLabel = Label(root,text='',font=('airal',25,'italic bold'),
+                  bg ='white',fg = 'red',width=40)
+fontLabel.place(x=10,y=10)
+labelSlider()
 
 random.shuffle(words)
 
@@ -91,6 +95,9 @@ timeLabelCount.place(x=600,y=150)
 gamePlayDetaiLabel = Label(root, text='Type word and Hit enter button',font=('arial',25,'italic bold'),)
 gamePlayDetaiLabel.place(x=120,y=450)
 ######################entry method
+wordEntry = Entry(root, font=('airal',25,'italic bold'),bd=10,justify = 'center')
+wordEntry.place(x=250,y=300)
+wordEntry.focus_set()
 #################################################
 root.bind('<Return>',startGame)
 root.mainloop()
